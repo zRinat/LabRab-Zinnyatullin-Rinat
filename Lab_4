@@ -1,0 +1,55 @@
+from flask import Flask, render_template, request
+from json import dumps as jsonstring
+
+app = Flask(__name__)
+
+class Classroom(object):
+    def __init__(self, name, teacher, id,num, image):
+        self.name = name
+        self.teach = teacher
+        self.floor = id
+        self.num = num
+        self.image = image
+
+    def __str__(self, name, teacher, floor,num, image):
+        return("Название: ",name,
+               " Преподаватель:", teacher,
+               " Этаж:", floor,
+                " Число студентов:", num,
+                " Примерно выглядят: ", image)
+class Kids(object):
+    def __init__(self, name, classrooms, teacher):
+        self.name = name
+        self.classrooms = classrooms
+        self.teacher = teacher
+
+    def __str__(self, name, classrooms,teacher):
+        return("Имя: ",name,
+               " Класс:", classrooms,
+               " Преподаватель:", teacher
+               )
+    
+class_1b = Classroom("1А", "Cамойлова Б.Б.", 1, 40, "puge.jpg")
+class_2c = Classroom("2С", "Григорьев В.Д.", 2, 35, "shtib.jpg")
+
+classes = [class_1b, class_2c]
+
+student_a = Kids("ИВанова А.А.", classes, "Самойлова Б.Б.")
+student_b = Kids("Бубова И.Г.", classes, "Григорьев В.Д.")
+student_c = Kids("Ванов С.А.", classes, "Самойлова Б.Б.")
+
+students = [student_a, student_b, student_c]
+ 
+@app.route("/")
+def hello_world():
+      return render_template('index.html',student = student_a)
+
+@app.route("/new_class")
+def adding():
+    name = request.args.get('name')
+    floor = request.args.get('teacher')
+    students = request.args.get('floor')
+    zavkaf = request.args.get('num')
+    new_class = Classroom(name,floor,students,zavkaf,"Anna liebert.jpeg")
+    student_a.classrooms.append(new_class)
+    return "Добавил"

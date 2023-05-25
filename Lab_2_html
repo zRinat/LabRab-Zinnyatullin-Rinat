@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel = 'stylesheet' href="style.css">
+        <script src="script.js"></script>
+        <title>Лабораторная 3 Университет</title>
+    </head>
+        <body>
+             <div class = "myheader">
+                <h1>Кафедра СМ10</h1>
+            </div>
+            <div class = "myheader">
+                <h2>Курс Веб-технологии</h2>
+            </div>
+            <div class = "myheader">
+                <h3>Лабораторные</h3>
+            </div>
+            <div class = "myheader">
+                <ul>
+                    <li>Лаб 1</li>
+                    <li>Лаб 2</li>
+                    <li>Лаб 3</li>
+                </ul>
+            </div>
+            
+            <div id ='otv_face'>
+                Ответственное лицо
+                <img id="myphoto" src="./Important_man.jpg"
+                 width = "400"
+                alt="Дед не дома">
+            </div>
+            
+            <div>
+                <ul>
+                    <li>Он убегает<br>
+                        <img src="./Johan liebert.jpeg"
+                        width = "400"
+                        alt="Дед не дома"></li>
+                    <li>Она догоняет<br>
+                        <img src="./Anna liebert.jpeg"
+                        width = "400"
+                        alt="Дед не дома"></li>
+                    <li>Он догоняет ту, что догоняет<br>
+                        <img src="./Tenma.webp"
+                        width = "400"
+                        alt="Дед не дома"></li>
+                </ul>
+            </div>
+            <div>
+                <table id="mytable">
+                    <tr>
+                        <th>Имя</th>
+                        <th>Вид</th>
+                        <th>Должность</th>
+                    </tr>
+                    <tr>
+                        <td>Димас</td>
+                        <td><img src="./Johan liebert.jpeg"
+                            width = "100"
+                            alt="Дед не дома"></li></td>
+                        <td>Он убегает</td>
+                    </tr>
+                    <tr>
+                        <td>Мадина</td>
+                        <td><img src="./Anna liebert.jpeg"
+                            width = "100"
+                            alt="Дед не дома"></li></td>
+                        <td>Она догоняет</td>
+                    </tr>
+                    <tr>
+                        <td>Макс</td>
+                        <td><img src="./Tenma.webp"
+                            width = "100"
+                            alt="Дед не дома"></li></td>
+                        <td>Он догоняет ту, что догоняет</td>
+                    </tr>
+                </table>
+            </div>
+            
+                Регистрация:
+                <br>
+                <label for = "name">
+                    Имя:
+                </label>
+                <input id="in_name" type = "text" name = "name" value=""><br>
+                
+                <label for = "name">
+                    Возраст: 
+                </label>
+                <input id = "in_age" type = "number" name = "age" value=""><br>
+                <label for = "name">
+                    Пол: 
+                </label>
+                <input id="in_sex"type = "radio" name = "sex" value="male" />
+                М
+                <input type = "radio" name = "sex" value="female" />
+                Ж
+                <br>
+                <label for = "name">
+                    Отвествтенный?
+                </label>
+                <input type = "checkbox" name = "otv">
+                <button type = "button" onclick = "myfunction()">Зарегистрироваться</button>
+                <a href = "#otv_face">Ответственное лицо</a>
+                <a href = "https://animego.online/615-monstr.html">Ugapanyuk</a>
+                
+        </body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: #AAbbcc;
+}
+
+#otv_face{
+background-color: red;
+color: white;
+width: 30%;
+margin: auto
+
+}
+
+.myheader{
+    margin: 20px;
+    font-family: "Courier New";
+}
